@@ -8,6 +8,9 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class TestController
 {
+    /**
+     * @Route("/", name="index")
+     */
     public function index()
     {
         dd("Ça fonctionne");
@@ -18,6 +21,6 @@ class TestController
      */
     public function test(Request $request, $age)
     {
-        return new Response("Vous aves $age ans");
+        return new Response("Vous avez $age ans !");
     }
 }
